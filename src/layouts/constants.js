@@ -1,0 +1,17 @@
+export const APP_WIDTH = 1400;
+export const APP_HEIGHT = 800;
+export const APP_PADDING = 40;
+
+export const HEADER_HEIGHT = 50;
+export const FOOTER_HEIGHT = 30;
+
+export const TOP_BOTTOM_DIVIDER_HEIGHT = 3;
+export const TOP_HEIGHT = Math.ceil(APP_HEIGHT * 0.64) - TOP_BOTTOM_DIVIDER_HEIGHT * 2;
+export const BOTTOM_HEIGHT = APP_HEIGHT - TOP_HEIGHT - TOP_BOTTOM_DIVIDER_HEIGHT * 2;
+
+export const VOICE_SEPARATOR_WIDTH = 1;
+
+export const TOP_LEFT_WIDTH = Math.ceil(APP_WIDTH * 0.23) - VOICE_SEPARATOR_WIDTH;
+export const TOP_RIGHT_WIDTH = APP_WIDTH - TOP_LEFT_WIDTH;
+
+export const TOP_HORIZONTAL_SEPARATOR_HEIGHT = TOP_HEIGHT - 10;

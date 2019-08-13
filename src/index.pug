@@ -1,0 +1,20 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="Content-Type", content="text/html;charset=UTF-8")
+    title #{htmlWebpackPlugin.options.title}
+    meta(name="description" content="A fully recreated web-based Roland TR-808 drum machine")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+
+    each cssFile in htmlWebpackPlugin.files.css
+      style !{compilation.assets[cssFile.substr(htmlWebpackPlugin.files.publicPath.length)].source()}
+
+  body
+    #loader
+      #loader-icon
+
+    #root.rendering
+
+    each jsFile in htmlWebpackPlugin.files.js
+      script(src=jsFile async)
