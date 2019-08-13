@@ -16,7 +16,7 @@ function createEmptyState() {
     y: null,
     scale: null,
     center: null,
-    cursor: null,
+    cursor: null
   };
 }
 
@@ -24,7 +24,7 @@ const Knob = ({ children, size, value, min, max, step, onChange, bufferSize = 36
   const [state, setState] = useReducer((state, newState) => ({ ...state, ...newState }), createEmptyState());
 
   useEffect(() => {
-    if (state.x !== null) {
+    if (state.y !== null) {
       document.addEventListener('mousemove', handleDrag, false);
       document.addEventListener('mouseup', endDrag, false);
 
@@ -89,8 +89,8 @@ const Knob = ({ children, size, value, min, max, step, onChange, bufferSize = 36
       height: size,
       width: size,
       ':hover': {
-        cursor: 'pointer',
-      },
+        cursor: 'pointer'
+      }
     },
 
     knob: {
@@ -98,8 +98,8 @@ const Knob = ({ children, size, value, min, max, step, onChange, bufferSize = 36
       borderRadius: '50%',
       height: '100%',
       width: '100%',
-      transform: `rotate(${rotation}deg) translateZ(0)`,
-    },
+      transform: `rotate(${rotation}deg) translateZ(0)`
+    }
   };
 
   const ss = StyleSheet.create(styles);
@@ -123,7 +123,7 @@ Knob.propTypes = {
   onChange: PropTypes.func.isRequired,
   bufferSize: PropTypes.number,
   overlayColor: PropTypes.string,
-  innerColor: PropTypes.string,
+  innerColor: PropTypes.string
 };
 
 export default Knob;
